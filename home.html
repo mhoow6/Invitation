@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>집들이 초대장 🏡</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            
+            /* --- [핵심 확인] 배경 설정 --- */
+            /* 배경 이미지를 image_0.png로 설정. 파일명과 확장자를 꼭 확인하세요. */
+            background-image: url('src/image_0.jpg'); 
+            
+            background-size: cover; 
+            background-attachment: fixed; 
+            background-position: center; 
+            background-repeat: no-repeat;
+        }
+
+        .overlay-content {
+            background-color: rgba(255, 255, 255, 0.9); /* 90% 불투명도 */
+            width: 100%;
+            max-width: 480px;
+            margin: 20px;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            overflow: hidden;
+            text-align: center;
+            padding: 40px 28px;
+            box-sizing: border-box;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #8fa189; /* 차분한 그리너리 색상 */
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 26px;
+            margin: 0 0 16px 0;
+            color: #2c302e;
+            font-weight: 700;
+        }
+
+        .intro-text {
+            font-size: 15.5px;
+            line-height: 1.65;
+            color: #555555;
+            margin-bottom: 35px;
+            word-break: keep-all;
+        }
+
+        .info-section {
+            background-color: #f7f6f2; 
+            border-radius: 18px;
+            padding: 24px;
+            margin-bottom: 35px;
+            text-align: left;
+            border: 1px solid #e5e1d3;
+        }
+        .info-row {
+            display: flex;
+            margin-bottom: 16px;
+        }
+        .info-row:last-child {
+            margin-bottom: 0;
+        }
+        .info-label {
+            width: 65px;
+            font-weight: 700;
+            color: #8fa189;
+        }
+        .info-content {
+            flex: 1;
+            color: #444444;
+            font-weight: 500;
+        }
+
+        .cat-section {
+            margin-bottom: 35px;
+            text-align: left;
+        }
+        .cat-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #2c302e;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .cat-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .cat-grid-item {
+            width: 100%;
+            height: 140px;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: white; 
+        }
+        .cat-grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .cat-grid-item.wide {
+            grid-column: span 2;
+            height: 200px;
+        }
+
+        .notice {
+            font-size: 13px;
+            color: #888888;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            background: rgba(253, 253, 253, 0.7); 
+            padding: 12px;
+            border-radius: 10px;
+        }
+
+        .btn {
+            display: block;
+            background-color: #2c302e;
+            color: white;
+            text-decoration: none;
+            padding: 16px;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background-color 0.2s;
+        }
+        .btn:hover {
+            background-color: #454b48;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay-content">
+        
+        <span class="badge">INVITATION</span>
+        <h1>새 보금자리에 초대합니다</h1>
+        
+        <p class="intro-text">
+            정성껏 가꾼 새로운 집에<br>
+            소중한 분들을 모시고자 합니다.<br>
+            저희 집 마스코트인 토리와 함께<br>
+            즐거운 시간 보내러 놀러 오세요! 🐾
+        </p>
+        
+        <div class="info-section">
+            <div class="info-row">
+                <span class="info-label">일시</span>
+                <span class="info-content">2026년 07월 17일 (토) 오전 12시</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">장소</span>
+                <span class="info-content">안양시 동안구 시민대로 272</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">연락처</span>
+                <span class="info-content">010-7178-1941</span>
+            </div>
+        </div>
+
+        <div class="cat-section">
+            <div class="cat-title">🐈 토리도 기다리고 있어요!</div>
+            <div class="cat-grid">
+                <div class="cat-grid-item wide">
+                    <img src="src/image_3.jpg" alt="Cat Laptop">
+                </div>
+                <div class="cat-grid-item">
+                    <img src="src/image_1.jpg" alt="Cat Side Profile">
+                </div>
+                <div class="cat-grid-item">
+                    <img src="src/image_2.jpg" alt="Cat Close Up">
+                </div>
+                <div class="cat-grid-item wide">
+                    <img src="src/image_4.jpg" alt="Cat Sleeping">
+                </div>
+            </div>
+        </div>
+        
+        <p class="notice">
+            ⚠️ 고양이 알레르기가 있으신 분은 미리 말씀해 주세요!<br>
+            💡 주차는 아파트 단지 내 방문객 주차장을 이용해 주시면 됩니다.
+        </p>
+        
+        <div class="map-btn-group">
+            <a href="https://map.naver.com/v5/search/안양시 동안구 시민대로 272" target="_blank" class="btn btn-naver">네이버 지도</a>
+        </div>
+    </div>
+
+</body>
+</html>
